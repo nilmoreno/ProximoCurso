@@ -11,13 +11,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import java.util.List;
+import java.util.Map;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MainFragment extends Fragment{
-
-    String[] images = {"dam","daw","informatica","multimedia"};
+    List<Map<String,Object>> data;
+    String[] titles = {"dam","daw","informatica","multimedia"};
+    String[] images = {"ic_dam","ic_daw","ic_informatica","ic_multimedia"};
 
     public MainFragment() {
         // Required empty public constructor
@@ -35,7 +39,7 @@ public class MainFragment extends Fragment{
     public void onActivityCreated(Bundle savedInstanceState) {
 
         super.onActivityCreated(savedInstanceState);
-        SimpleAdapter adapter = new SimpleAdapter (this,
+        SimpleAdapter adapter = new SimpleAdapter (this.getActivity(),
                 data,
                 android.R.layout.activity_list_item,
                 new String[] {"image","title"},

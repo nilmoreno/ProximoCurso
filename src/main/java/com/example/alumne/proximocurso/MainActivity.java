@@ -17,13 +17,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /*public void onGOButtonClicked(String message) {
+    public void onGOButtonClicked(String message) {
 
         FragmentManager fragmentManager = this.getSupportFragmentManager();
-        //DetailFragment detailFragment = (DetailFragment) fragmentManager.findFragmentById(R.id.detailFragment);
+        DetailFragment detailFragment = (DetailFragment) fragmentManager.findFragmentById(R.id.detailFragment);
 
         // if screen size = SMARTPHONE -> open DetailActivity (sending the message as EXTRA)
-        /*if (detailFragment == null)
+        if (detailFragment == null)
         {
             //SMARTPHONE
             //-> open DetailActivity (sending the message as EXTRA)
@@ -40,5 +40,5 @@ public class MainActivity extends AppCompatActivity {
             textView.setText(message);
 
         }
-    }*/
+    }
 }
